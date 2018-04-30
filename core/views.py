@@ -7,6 +7,7 @@ from rest_framework import status
 from .models import Note , User 
 from .serializers import NoteSerializer , UserSerializer
 
+#api
 
 class getnotes(APIView):
 
