@@ -20,9 +20,10 @@ from core import views
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('getnotes/<int:pk>/',views.getnotes.as_view()),
+    path('getnotes/<slug:uid>/',views.getnotes.as_view()),
     path('addnote/',views.addnote.as_view()),
     path('adduser/',views.adduser.as_view()),
+    path('updatenote/<int:pk>/',views.updatenote.as_view()),
 ]
 
 
