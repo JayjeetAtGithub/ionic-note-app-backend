@@ -41,3 +41,11 @@ class updatenote(APIView):
 			serializer.save()
 			return Response(serializer.data,status=status.HTTP_201_CREATED)
 		return Response(serializer.errors,status=status.HTTP_404_BAD_REQUEST)
+
+
+
+class deletenote(APIView):
+	def delete(self,request,pk,format=None):
+		note = Note.objects.get(pk=pk)
+		note.delete()
+		return Response(status=status.HTTP_204_NO_CONTENT)

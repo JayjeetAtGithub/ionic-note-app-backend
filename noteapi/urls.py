@@ -24,6 +24,7 @@ urlpatterns = [
     path('addnote/',views.addnote.as_view()),
     path('adduser/',views.adduser.as_view()),
     path('updatenote/<int:pk>/',views.updatenote.as_view()),
+    path('deletenote/<int:pk>/',views.deletenote.as_view()),
 ]
 
 
