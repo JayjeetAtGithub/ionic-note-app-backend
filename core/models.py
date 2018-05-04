@@ -13,9 +13,9 @@ class Note(models.Model):
 
 class User(models.Model):
 	uid = models.CharField(max_length=255,default='')
-	email = models.CharField(max_length=255)
-	displayName = models.CharField(max_length=255)
-	photoURL = models.CharField(max_length=255)
+	email = models.CharField(max_length=255,default='')
+	displayName = models.CharField(max_length=255,default='')
+	photoURL = models.CharField(max_length=255,default='')
 
 
 	def __str__(self):

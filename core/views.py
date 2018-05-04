@@ -27,10 +27,16 @@ class addnote(APIView):
 class adduser(APIView):
 	def post(self,request,format=None):
 		serializer = UserSerializer(data=request.data)
-		if serializer.is_valid():
-			serializer.save()
-			return Response(serializer.data,status=status.HTTP_201_CREATED)
-		return Response(serializer.errors,status=status.HTTP_404_BAD_REQUEST)
+		temp_user = User.objects.filter(uid=request.data['uid'])
+		if len(temp_user) == 0:
+			if serializer.is_valid():
+				serializer.save()
+				return Response(serializer.data,status=status.HTTP_201_CREATED)
+			return Response(serializer.errors,status=status.HTTP_404_BAD_REQUEST)
+		else :
+			if serializer.is_valid():
+				return Response(serializer.data,status=status.HTTP_201_CREATED)
+			return Response(serializer.errors,status=status.HTTP_404_BAD_REQUEST)
 
 
 class updatenote(APIView):
