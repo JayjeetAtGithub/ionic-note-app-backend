@@ -3,7 +3,8 @@ Backend with DRF
 
 How to set the backend running ?
 
-1) pip must be installed
+1) pip must be installed and then run  pip install -r dependencies.txt
+   *if installation of mysqlclient fails then try again with pip3
 2) mySQL server must be installed with password '12345' and username 'root' / or you may change the password in the settings.py 
    file to your set password.
 3) A database named 'noteapp' must be created.
