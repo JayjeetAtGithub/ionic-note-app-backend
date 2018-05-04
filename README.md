@@ -1,5 +1,6 @@
 # ionic-note-app-backend
-Backend with DRF
+Backend with DJango 2.0.2 and Django-rest-framework
+Database : MySQL
 
 How to set the backend running ?
 
@@ -15,6 +16,6 @@ How to set the backend running ?
 
 5) Then run python3.6 manage.py runserver
 
-6) Run 'python3.6 manage.py createsuperuser' to make yourself the admin of the site
+6) Run python3.6 manage.py createsuperuser to make yourself the admin of the site
 
 7) The site will be up and running on localhost:8000
