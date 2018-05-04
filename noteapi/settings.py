@@ -89,16 +89,36 @@ WSGI_APPLICATION = 'noteapi.wsgi.application'
 # }
 
 
+#
+#
+# DATABASES = {
+#     'default':{
+#         'ENGINE':'django.db.backends.postgresql',
+#         'NAME':'wwlgnspq',
+#         'USER':'wwlgnspq',
+#         'PASSWORD':'16fodOaVQavapWdzUchoU0D6POzT9ff-',
+#         'HOST':'elmer.db.elephantsql.com',
+#         'PORT':'5432',
+#     }
+# }
+
+
+
+
+
 DATABASES = {
     'default':{
-        'ENGINE':'django.db.backends.postgresql',
-        'NAME':'wwlgnspq',
-        'USER':'wwlgnspq',
-        'PASSWORD':'16fodOaVQavapWdzUchoU0D6POzT9ff-',
-        'HOST':'elmer.db.elephantsql.com',
-        'PORT':'5432',
+        'ENGINE':'django.db.backends.mysql',
+        'NAME':'noteapp',
+        'USER':'root',
+        'PASSWORD':'12345',
+        'HOST':'',
+        'PORT':'',
     }
 }
+
+
+
 
 
 
